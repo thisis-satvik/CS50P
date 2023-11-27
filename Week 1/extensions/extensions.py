@@ -1,15 +1,16 @@
-file = (input("File name: ")).lower().strip().split(".")
-
-application = ["zip", "pdf"]
-image = ["png", "gif"]
-
-if file[-1] == "txt":
-    print("text/plain")
-elif file[-1] in application:
-    print(f"application/{file[-1]}")
-elif file[-1] == "jpg" or file[-1] == "jpeg":
+f=input("File name: ").lower().strip()
+if f.endswith(".gif"):
+    print("image/gif")
+elif f.endswith(".jpg" or ".jpeg"):
     print("image/jpeg")
-elif file[-1] in image:
-    print(f"image/{file[-1]}")
+elif f.endswith(".png"):
+    print("image/png")
+elif f.endswith(".pdf"):
+    print("application/pdf")
+elif f.endswith(".txt"):
+    print("text/plain")
+elif f.endswith(".zip"):
+    print("application/zip")
 else:
     print("application/octet-stream")
+    
