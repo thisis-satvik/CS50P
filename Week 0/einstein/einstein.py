@@ -1,3 +1,4 @@
-m = int(input("Enter mass: "))
-
-print(m * 300000000 * 300000000)
+m=int(input("m:"))
+c=300000000
+E=(m*pow(c,2))
+print("E:",E)
